@@ -20,7 +20,7 @@
 
   - name: Deploy Artifacts to tomcat server
     get_url:
-      url: http://34.223.41.68:8081/nexus/service/local/repositories/gol/content/Dev/dev/1.1/dev-1.1.war
+      url: http://34.223.41.68:8081/nexus/service/local/repositories/gol/content/Dev/dev/{{VERSION}}/dev-{{VERSION}}.war
       url_username: admin
       password: admin123
       dest: /usr/share/tomcat/webapps/
