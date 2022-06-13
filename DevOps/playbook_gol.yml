@@ -24,6 +24,11 @@
       url_username: admin
       password: admin123
       dest: /usr/share/tomcat/webapps/
+      
+  - name: Restart Tomcat Server
+    service:
+      name: tomcat
+      state: restarted
 
 
 
