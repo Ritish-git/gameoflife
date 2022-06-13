@@ -20,7 +20,7 @@
       
   - name: Delete old version
     file:
-      path: /usr/share/tomcat/webapps/*.war
+      path: /usr/share/tomcat/webapps/*.*.war
       state: absent      
 
   - name: Deploy Artifacts to tomcat server
