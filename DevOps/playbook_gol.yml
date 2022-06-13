@@ -21,7 +21,8 @@
   - name: Delete old version
     file:
       path: /usr/share/tomcat/webapps/dev*
-      state: absent      
+      state: absent
+    become_user: root
 
   - name: Deploy Artifacts to tomcat server
     get_url:
