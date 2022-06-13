@@ -17,6 +17,11 @@
     copy:
       src: tomcat-users.xml
       dest: /etc/tomcat/tomcat-users.xml
+      
+  - name: Delete old version
+    file:
+      path: /usr/share/tomcat/webapps/*.war
+      state: absent      
 
   - name: Deploy Artifacts to tomcat server
     get_url:
