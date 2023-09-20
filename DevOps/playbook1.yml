@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Set fs.suid_dumpable to 0 (disabled)
+    ansible.posix.sysctl:
+      name: fs.suid_dumpable
+      value: 0
+      state: present
