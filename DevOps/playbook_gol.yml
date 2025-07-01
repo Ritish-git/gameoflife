@@ -32,6 +32,6 @@
       dest: /home/user1/apache-tomcat-9.0.105/conf/tomcat-users.xml
 
   - name: Start Tomcat
-    shell: startup.sh
+    shell: ./startup.sh
     args:
       chdir: /home/user1/apache-tomcat-9.0.105/bin
