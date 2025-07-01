@@ -13,7 +13,7 @@
   - name: Download Tomcat
     get_url:
       url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.105/bin/apache-tomcat-9.0.105.tar.gz
-      path: /home/user1/
+      dest: /home/user1/
 
   - name: Extract Tomcat
     unarchive:
