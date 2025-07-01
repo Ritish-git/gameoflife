@@ -31,16 +31,7 @@
       src: tomcat-users.xml
       dest: /home/user1/apache-tomcat-9.0.105/conf/tomcat-users.xml
 
-  - name: Deploy Artifacts to tomcat server
-    get_url:
-      url: http://34.223.41.68:8081/nexus/service/local/repositories/gol/content/Dev/dev/{{VERSION}}/dev-{{VERSION}}.war
-      url_username: admin
-      password: admin123
-      dest: /usr/share/tomcat/webapps/
-      
-  - name: Restart Tomcat Server
-    service:
-      name: tomcat
-      state: restarted
-
-
+  - name: Start Tomcat
+    shell: startup.sh
+    args:
+      chdir: /home/user1/apache-tomcat-9.0.105/bin
