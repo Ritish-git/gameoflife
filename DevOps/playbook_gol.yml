@@ -10,8 +10,13 @@
     with_items:
       - java-1.8.0
       - python
+
+  - name: Install pip packages
+    pip:
+      name: "{{ item }}"
+    loop:
       - boto3
-      - botocore
+      - botocore      
 
   - name: Download Tomcat
     get_url:
