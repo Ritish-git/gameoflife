@@ -24,6 +24,7 @@
       dest: /home/user1/
       owner: user1
       group: user1
+      remote_src: yes
 
   - name: Copy tomcat users file to tomcat server
     copy:
