@@ -14,11 +14,16 @@
     get_url:
       url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.105/bin/apache-tomcat-9.0.105.tar.gz
       dest: /home/user1/
+      mode: 0777
+      owner: user1
+      group: user1
 
   - name: Extract Tomcat
     unarchive:
       src: /home/user1/apache-tomcat-9.0.105.tar.gz
-      dest: /home/user1/      
+      dest: /home/user1/
+      owner: user1
+      group: user1
 
   - name: Copy tomcat users file to tomcat server
     copy:
