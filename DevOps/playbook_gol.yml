@@ -31,7 +31,15 @@
       src: tomcat-users.xml
       dest: /home/user1/apache-tomcat-9.0.105/conf/tomcat-users.xml
 
-  - name: Start Tomcat
+  - name: Copy context.xml
+    copy:
+      src: context.xml
+      dest: /home/user1/apache-tomcat-9.0.105/webapps/manager/META-INF/context.xml
+
+      
+  - name: Start Tomcat/home/user1/apache-tomcat-9.0.105/webapps/manager/META-INF
     shell: ./startup.sh
     args:
       chdir: /home/user1/apache-tomcat-9.0.105/bin
+
+      
