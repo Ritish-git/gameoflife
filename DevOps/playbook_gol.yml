@@ -58,7 +58,7 @@
       secret_key: "{{Secret_Key}}"
       bucket: gameoflife-12345678
       object: gameoflife.war
-      dest: /home/user1/apache-tomcat-9.0.105/webapps
+      dest: /home/user1/apache-tomcat-9.0.105/webapps/gameoflife.war
       mode: get      
       
   - name: Start Tomcat
