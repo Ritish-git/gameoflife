@@ -36,8 +36,22 @@
       src: context.xml
       dest: /home/user1/apache-tomcat-9.0.105/webapps/manager/META-INF/context.xml
 
+
+  - name: Stop Tomcat server
+    shell: ./shutdown.sh
+    args:
+      chdir: /home/user1/apache-tomcat-9.0.105/bin
+
+  - name: Deploy Gameof Life.war
+    amazon.aws.s3_object:
+      access_key: {{"Access_key"}}
+      secret_key: {{"Secret_Key"}}
+      bucket: gameoflife-12345678
+      object: gameoflife.war
+      dest: /home/user1/apache-tomcat-9.0.105/webapps
+      mode: get      
       
-  - name: Start Tomcat/home/user1/apache-tomcat-9.0.105/webapps/manager/META-INF
+  - name: Start Tomcat
     shell: ./startup.sh
     args:
       chdir: /home/user1/apache-tomcat-9.0.105/bin
