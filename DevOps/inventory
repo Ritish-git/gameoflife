@@ -1,6 +1,6 @@
 [webservers]
 
-web1_Tomcat ansible_ssh_host=35.87.184.18
+web1_Tomcat ansible_ssh_host=34.221.157.197
 
 [webservers:vars]
 ansible_ssh_user=user1
