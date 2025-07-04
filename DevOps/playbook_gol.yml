@@ -54,8 +54,8 @@
 
   - name: Deploy Gameof Life.war
     amazon.aws.s3_object:
-      access_key: "{{Access_key}}"
-      secret_key: "{{Secret_Key}}"
+      access_key: "{{ Access_key }}"
+      secret_key: "{{ Secret_Key }}"
       bucket: gameoflife12
       object: gameoflife.war
       dest: /home/user1/apache-tomcat-9.0.105/webapps/gameoflife.war
